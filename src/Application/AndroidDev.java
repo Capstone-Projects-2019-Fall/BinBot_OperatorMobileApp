@@ -1,12 +1,12 @@
-package application;
+package Application;
 
-/**
+/**<h1>AndroidDev</h1>
  * @author Kwamina M Thompson
  * @version 1.0
  * @since 2019-10-13
  */
 
-public class androidDev {
+public class AndroidDev {
 	
 	/**
 	 * <h1>OnJSONreceiver(Object JSON )</h1> this method method is will receive all JSON
@@ -18,14 +18,14 @@ public class androidDev {
 	 *
 	 */
 	
-	void OnJSONreciever(Object JSON) {
+	public void OnJSONreciever(Object JSON) {
 	}
 
 	/**
 	 * <h1>TouchOnButton() </h1> This method gets called when a user touches the on button 
 	 * and sends packets to the server to turn on BinBot
 	 */
-	void TouchOnButton() {
+	public void TouchOnButton() {
 		
 	}
 	
@@ -33,7 +33,7 @@ public class androidDev {
 	 * <h1>TouchOffButton() </h1>  This method gets called when the user touches the off 
 	 * button the screen and notifies the server to shutdown BinBot operations
 	 */
-	void TouchOffButton() {
+	public void TouchOffButton() {
 		
 	}
 	
@@ -43,10 +43,10 @@ public class androidDev {
 	 * screen.
 	 * @author Kwamina M Thompson
 	 * @version 1.0
-	 * @param image
+	 * @param img
 	 * @since 2019-10-13
 	 */
-	private void OnDisplay(Object img) {
+	public void OnDisplay(Object img) {
 		
 	}
 
