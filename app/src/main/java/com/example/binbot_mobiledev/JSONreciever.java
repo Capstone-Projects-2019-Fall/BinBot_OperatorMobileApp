@@ -1,4 +1,14 @@
 package com.example.binbot_mobiledev;
 
-public class JSONreciever {
+import android.os.AsyncTask;
+
+public class JSONreciever extends AsyncTask<Void,Void,Void> {
+
+
+    @Override
+    protected Void doInBackground(Void... voids) {
+
+        
+        return null;
+    }
 }
