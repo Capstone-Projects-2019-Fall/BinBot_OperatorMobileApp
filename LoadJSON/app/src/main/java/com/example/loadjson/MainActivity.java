@@ -9,7 +9,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     Button download ;
-    ImageView imageView;
+   public static ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
