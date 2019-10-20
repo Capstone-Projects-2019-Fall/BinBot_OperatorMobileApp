@@ -21,7 +21,7 @@ public class JSONreciever extends AsyncTask<Void,Void,Void> {
 
             InputStream inputStream = socket.getInputStream();
 
-            
+
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
