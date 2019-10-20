@@ -6,10 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ede38e0-e92d-4310-9465-630df7f75098" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/binbot_mobiledev/JSONreciever.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/binbot_mobiledev/JSONreciever.java" afterDir="false" />
-    </list>
+    <list default="true" id="1ede38e0-e92d-4310-9465-630df7f75098" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +24,7 @@
     <session id="1875937311">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.opened" value="2" />
@@ -277,7 +274,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12281879" />
