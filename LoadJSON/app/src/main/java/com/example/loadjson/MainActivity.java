@@ -10,6 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button download ;
    public static ImageView imageView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +20,12 @@ public class MainActivity extends AppCompatActivity {
         download = findViewById(R.id.getImage);
         imageView = findViewById(R.id.imageViewer);
 
+
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
+
             }
         });
     }
