@@ -11,17 +11,19 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
     private RequestQueue mque;
-    TextView textView;
-    Button start;
+    private TextView textView;
+    private Button start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 jsonParser();
+
             }
+
         });
 
 
@@ -47,24 +51,30 @@ public class MainActivity extends AppCompatActivity {
     private void jsonParser() {
         String url = "https://api.myjson.com/bins/9qcwk";
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-
-                        try {
-                            String byteForm = response.getString("images");
-                            textView.setText(byteForm);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
+        JsonArrayRequest request = new JsonArrayRequest(
+                Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void onResponse(JSONArray response) {
+
+                try {
+                   for(int i = 0 ; i < response.length(); i++){
+                       JSONObject list = response.getJSONObject(i);
+                       String img = list.getString("image");
+
+                       textView.setText(img);
+                   }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error)  {
+
                 error.printStackTrace();
             }
         });
+
         mque.add(request);
     }
 }
