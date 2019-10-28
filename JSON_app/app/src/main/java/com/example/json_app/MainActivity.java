@@ -2,6 +2,8 @@ package com.example.json_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +20,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Base64;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void jsonParser() {
-        String url = "https://api.myjson.com/bins/9qcwk";
+        String url = "https://api.myjson.com/bins/aoqpo";
 
         JsonArrayRequest request = new JsonArrayRequest(
                 Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
@@ -76,5 +80,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mque.add(request);
+    }
+
+
+    private Bitmap stringToBufferImage(String s){
+
+        byte [] val = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            val = Base64.getDecoder().decode(s);
+        }
+        Bitmap decodedBit = BitmapFactory.decodeByteArray(val, 0, val.length);
+        return decodedBit;
     }
 }
