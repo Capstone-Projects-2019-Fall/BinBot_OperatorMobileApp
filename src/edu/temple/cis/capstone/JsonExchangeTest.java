@@ -1,7 +1,6 @@
 package edu.temple.cis.capstone;
 
 import BinBotDemo1.connections.ServerConnection;
-import BinBotDemo1.instructions.Instruction;
 
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ import java.io.IOException;
 public class JsonExchangeTest {
 
     static final String IP = "127.0.0.1";
-    static final int PORT = 7001;
+    static final int PORT = 7002;
 
     static ServerConnection connection;
 
@@ -32,7 +31,7 @@ public class JsonExchangeTest {
         String jsonReceive = connection.receive();
         System.out.println("received: " + jsonReceive);
 
-        Instruction instrSend = new Instruction(jsonReceive);
+        AppMessage instrSend = new AppMessage(jsonReceive);
         System.out.print("Sending: " + instrSend.json());
         connection.send(instrSend.json());
         System.out.println("Sent");
