@@ -1,4 +1,4 @@
-package Application;
+package edu.temple.cis.capstone.Application;
 
 /**<h1>AndroidDev</h1>
  * @author Kwamina M Thompson
