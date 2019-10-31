@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bb25f87-f083-4a22-aa9a-e28271b606fc" name="Default" comment="Added connection and instruction classes and created test to communicate with server">
-      <change afterPath="$PROJECT_DIR$/src/edu/temple/cis/capstone/AppMessage.java" afterDir="false" />
+    <list default="true" id="2bb25f87-f083-4a22-aa9a-e28271b606fc" name="Default" comment="Switched instruction class to AppMessage class because I forgot we use that rather than the instruction class in the mobile app. Also refactored code to run in android">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/temple/cis/capstone/JsonExchangeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/temple/cis/capstone/JsonExchangeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/temple/cis/capstone/instructions/ArmInstruction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/temple/cis/capstone/instructions/Instruction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/temple/cis/capstone/instructions/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/temple/cis/capstone/instructions/TreadInstruction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/temple/cis/capstone/AppMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/temple/cis/capstone/AppMessage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +40,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/temple/cis/capstone/JsonExchangeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+            <state relative-caret-position="335">
+              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,8 +52,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/temple/cis/capstone/AppMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            <state relative-caret-position="663">
+              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,9 +83,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -117,6 +118,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -128,7 +130,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,14 +210,20 @@
       <option name="project" value="LOCAL" />
       <updated>1572562476568</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Switched instruction class to AppMessage class because I forgot we use that rather than the instruction class in the mobile app. Also refactored code to run in android">
+      <created>1572563063089</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572563063089</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Resources Explorer" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
@@ -224,6 +231,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.27825513" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info id="Resources Explorer" order="7" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
@@ -247,9 +255,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added connection and instruction classes and created test to communicate with server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added connection and instruction classes and created test to communicate with server" />
+    <MESSAGE value="Switched instruction class to AppMessage class because I forgot we use that rather than the instruction class in the mobile app. Also refactored code to run in android" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switched instruction class to AppMessage class because I forgot we use that rather than the instruction class in the mobile app. Also refactored code to run in android" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/MyFrame.java" />
     <entry file="file://$PROJECT_DIR$/src/edu/temple/cis/capstone/Application/AndroidDev.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -263,24 +273,23 @@
     <entry file="file://$PROJECT_DIR$/ServerDev/app/src/main/java/com/example/server/MessageSender.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/temple/cis/capstone/JsonExchangeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        <state relative-caret-position="335">
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/temple/cis/capstone/AppMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state relative-caret-position="663">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

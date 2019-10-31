@@ -1,7 +1,14 @@
 package edu.temple.cis.capstone;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 
 
 /**
@@ -10,6 +17,8 @@ import org.json.JSONObject;
  * {
  *     "poweredState":<Boolean>,
  *     "img":<String>
+*      "height":<int>
+ *     "width":<width>
  * }
  * where poweredState is true when the system should continue operation and the img is a BufferedImage converted into
  * a string which will be displayed in the mobile application.
@@ -20,7 +29,9 @@ import org.json.JSONObject;
 public class AppMessage
 {
 	private Boolean poweredState;
-	private String img = null;
+	private Bitmap img = null;
+	private int height = -1;
+	private int width = -1;
 
 	/**
 	 * This constructor takes as input a json string. It assumes that the json is properly formatted in the proper
@@ -34,7 +45,9 @@ public class AppMessage
 		try {
 			jsonObject = new JSONObject(json);
 			this.poweredState = jsonObject.getBoolean("poweredState");
-			this.img = jsonObject.getString("img");
+			this.height = jsonObject.getInt("height");
+			this.width = jsonObject.getInt("width");
+			this.img = this.stringToBitmap(jsonObject.getString("img"));
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
@@ -46,9 +59,11 @@ public class AppMessage
 	 * @author Sean DiGirolamo
 	 * @since 2019-10-29
 	 */
-	public AppMessage(Boolean poweredState, String img) {
+	public AppMessage(Boolean poweredState, Bitmap img, int height, int width) {
 		this.poweredState = poweredState;
 		this.img = img;
+		this.height = height;
+		this.width = width;
 	}
 
 	/**
@@ -59,15 +74,16 @@ public class AppMessage
 	 */
 	public String json() {
 		StringBuilder retval = new StringBuilder("{\"poweredState\":")
-			.append(this.poweredState.toString())
-			.append(",")
+			.append(this.poweredState.toString()).append(",")
 			.append("\"img\":" + "\"");
 
 		if (this.img != null) {
 			retval.append(img);
 		}
 
-		retval.append("}");
+		retval.append("\",")
+				.append("\"height\":").append(this.height).append(",")
+				.append("\"width\":").append(this.width).append("}");
 
 		return retval.toString();
 	}
@@ -88,7 +104,20 @@ public class AppMessage
 	 * @author Sean DiGirolamo
 	 * @since 2019-10-21
 	 */
-	public String img() {
+	public Bitmap img() {
 		return this.img;
+	}
+
+	private Bitmap stringToBitmap(String image){
+		try{
+			byte [] encodeByte= Base64.decode(image,Base64.DEFAULT);
+
+			InputStream inputStream  = new ByteArrayInputStream(encodeByte);
+			Bitmap bitmap  = BitmapFactory.decodeStream(inputStream);
+			return bitmap;
+		}catch(Exception e){
+			e.getMessage();
+			return null;
+		}
 	}
 }
