@@ -16,8 +16,8 @@ import java.io.InputStream;
  * the Server to stop operation and for sending images to display to the app. It is sent as a json string in the format
  * {
  *     "poweredState":<Boolean>,
- *     "img":<String>
-*      "height":<int>
+ *     "img":<String>,
+*      "height":<int>,
  *     "width":<width>
  * }
  * where poweredState is true when the system should continue operation and the img is a BufferedImage converted into
