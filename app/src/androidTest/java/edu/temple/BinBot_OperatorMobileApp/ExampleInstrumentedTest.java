@@ -1,4 +1,4 @@
-package edu.temple.myapplication;
+package edu.temple.BinBot_OperatorMobileApp;
 
 import android.content.Context;
 
