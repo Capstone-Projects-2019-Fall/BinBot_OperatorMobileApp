@@ -1,6 +1,7 @@
 package edu.temple.BinBot_OperatorMobileApp;
 
-import BinBotDemo1.connections.ServerConnection;
+import edu.temple.BinBot_OperatorMobileApp.connections.ServerConnection;
+import edu.temple.BinBot_OperatorMobileApp.connections.ServerConnection;
 
 import java.io.IOException;
 
@@ -13,7 +14,8 @@ import java.io.IOException;
  */
 public class JsonExchangeTest {
 
-    static final String IP = "127.0.0.1";
+//  static final String IP = "127.0.0.1";
+    static final String IP = "192.168.56.1";
     static final int PORT = 7002;
 
     static ServerConnection connection;
