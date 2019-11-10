@@ -1,4 +1,4 @@
-package edu.temple.BinBot_OperatorMobileApp;
+package com.example.capstonework;
 
 import org.junit.Test;
 

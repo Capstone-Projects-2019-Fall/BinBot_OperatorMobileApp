@@ -1,4 +1,4 @@
-package edu.temple.BinBot_OperatorMobileApp.connections;
+package com.example.capstonework;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -13,7 +13,9 @@ import java.net.Socket;
  * @version 1.0
  * @since 2019-10-23
  */
+
 public class ServerConnection {
+
     private Socket sock;
 
     /**
@@ -37,6 +39,7 @@ public class ServerConnection {
     public void send(String s) throws IOException {
         PrintWriter out = new PrintWriter(sock.getOutputStream(), true);
         out.println(s);
+
     }
 
     /**
@@ -54,5 +57,9 @@ public class ServerConnection {
         }
         retval = br.readLine();
         return retval;
+    }
+
+    public void close() throws IOException {
+        this.sock.close();
     }
 }

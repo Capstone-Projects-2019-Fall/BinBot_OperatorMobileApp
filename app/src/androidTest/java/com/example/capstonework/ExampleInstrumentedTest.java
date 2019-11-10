@@ -1,4 +1,4 @@
-package edu.temple.BinBot_OperatorMobileApp;
+package com.example.capstonework;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("edu.temple.myapplication", appContext.getPackageName());
+        assertEquals("com.example.capstonework", appContext.getPackageName());
     }
 }
