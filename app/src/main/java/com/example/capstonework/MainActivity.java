@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void stopThread(boolean b) {
         boolean stopKey = b;
-        final String IP = "10.109.197.58";
+        final String IP = "192.168.43.68";
         final int PORT = 7002;
 
         new Thread(new Runnable() {
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
     static public void startThread(boolean key){
         final boolean newkey = key;
-        final String IP = "10.109.197.58";
+        final String IP = "192.168.43.68";
         final int PORT = 7002;
         new Thread(new Runnable() {
             @Override
